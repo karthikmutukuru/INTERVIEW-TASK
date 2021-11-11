@@ -1,0 +1,31 @@
+<h1 style="text-align:center">
+    {{viewTitle}}
+</h1>
+<form name="login" >
+    <div class="form-group">
+        Username : <input type="text" class="form-control" name="userid" placeholder="Enter User Name"/>
+    </div>
+    <div class="form-group">
+        Password : <input type="password" class="form-control" name="pswrd" placeholder="Enter password"/>
+    </div>
+    <div class="form-group">
+        <input type="button" class="btn btn-primary" onclick="check(this.form)" value="Login"/>
+        <input type="reset" class="btn btn-primary" value="Cancel"/>
+        <span><a href="/" style="float:right;">Forgot Password?</a></span>
+    </div>
+</form>
+
+<script language="javascript">
+    function check(form)/*function to check userid & password*/
+    {
+        /*the following code checkes whether the entered userid and password are matching*/
+        if(form.userid.value == "admin" && form.pswrd.value == "admin")
+        {
+            window.location.href = "http://localhost:3000/employee"/*opens the target page while Id & password matches*/
+        }
+        else
+        {
+            alert("Incorrect Username or Password")/*displays error message*/
+        }
+    }
+</script>
