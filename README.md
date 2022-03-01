@@ -1,1 +1,1 @@
-# INTERVIEW-TASK
+# Internship task
